@@ -344,7 +344,6 @@ main .description .desc_img > img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*justify-content: space-between; !* !!! when post arrow - DELETE *!*/
 }
 .steps .description {
     display: flex;
@@ -354,17 +353,60 @@ main .description .desc_img > img {
     margin-right: 70px;
     padding: 25px;
 }
+.steps .description p {
+    font-size: 15pt;
+    font-style: normal;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.steps .description:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.steps .description:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
 .steps .description .desc_img {
     margin: 0;
     padding: 0;
     width: 100%;
-    border-radius: 25px;
 }
 .steps .description .short {
     font-size: 12pt;
     font-style: italic;
     opacity: 60%;
 }
-.steps .description:last-child {
-    margin-right: 0;
+.arrow_detail {
+    position: relative;
+    left: 89%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #77b5d3;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.arrow_detail .right {
+    color: white;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+.arrow_detail:hover {
+    transition: all 1s;
+    box-shadow: 0 0 20px 4px #c9c6c6;
+    -webkit-box-shadow: 0 0 20px 4px #c9c6c6;
+}
+.description:hover > .first .arrow_detail {
+    animation: arrowX 1.5s infinite ease-in-out;
+}
+@keyframes arrowX {
+    0%, 100% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
 }

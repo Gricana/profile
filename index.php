@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <header id="head">
@@ -64,20 +63,30 @@
         <p class="heading">Этапы разработки</p>
         <div class="steps">
             <div class="description">
-                <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>
-                <div class="short">На данном этапе с заказчиком обговариваются условия сотрудничества
-                    и конкретный план предполагаемого сайта
+                <div class="first">
+                    <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>
+                    <div class="short"><p>Составление ТЗ</p>На данном этапе с заказчиком обговариваются условия сотрудничества
+                        и конкретный план предполагаемого сайта
+                    </div>
+                    <div class="arrow_detail">
+                        <div class="right">&#8594;</div>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="short">
+                        Какой-то текст
+                    </div>
                 </div>
             </div>
             <div class="description"></div>
             <div class="description"></div>
-        </div>
+
         <a class="arrow_up" title="Наверх" style="display: none">&#8593;</a>
     </main>
 
     <footer>
 
     </footer>
-
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

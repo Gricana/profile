@@ -344,15 +344,16 @@ main .description .desc_img > img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-around;*/
     margin: 25px 0 50px 0;
 }
 .wrap {
+    margin-right: auto;
     perspective: 2000px;
     perspective-origin: 0;
 }
-.steps .wrap:last-child, .steps:last-child {
-    margin-right: 0;
+.steps .wrap:last-child {
+    margin-right: 30px;
 }
 .cube {
     position: relative;
@@ -371,11 +372,11 @@ main .description .desc_img > img {
     border: solid 2px #eae7e7;
     border-radius: 25px;
 }
-.cube div:first-child {
+.steps .wrap:nth-child(1) .front {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-.cube div:last-child {
+.cube .right:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }

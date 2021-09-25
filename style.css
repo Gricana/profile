@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: #f9f7f7;
+    background: linear-gradient(to right bottom, #b5e783, #dfd458,  #65d4ea, #9b78cb);
 }
 header {
     width: 100%;
@@ -344,38 +344,51 @@ main .description .desc_img > img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 50px 0;
 }
-.steps .description {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    height: fit-content;
-    margin-right: 70px;
-    padding: 25px;
+.wrap {
+    perspective: 2000px;
+    perspective-origin: 0;
 }
-.steps .description p {
-    font-size: 15pt;
-    font-style: normal;
-    margin-bottom: 10px;
-    font-weight: bold;
+.steps .wrap:last-child, .steps:last-child {
+    margin-right: 0;
 }
-.steps .description:first-child {
-    border-bottom-right-radius: 0;
+.cube {
+    position: relative;
+    height: 280px;
+    width: 280px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+}
+.cube > div {
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color: white;
+    border: solid 2px #eae7e7;
+    border-radius: 25px;
+}
+.cube div:first-child {
     border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
-.steps .description:last-child {
+.cube div:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-.steps .description .desc_img {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.cube > div:hover {
+    border: solid 2px #77b5d3;
+    transition: all 1.2s;
 }
-.steps .description .short {
-    font-size: 12pt;
-    font-style: italic;
-    opacity: 60%;
+.front {
+    transform: translateZ(180px);
+}
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
 }
 .arrow_detail {
     position: relative;
@@ -389,7 +402,7 @@ main .description .desc_img > img {
     border-radius: 50%;
     margin-top: 15px;
 }
-.arrow_detail .right {
+.arrow_detail .arrow {
     color: white;
     font-size: 14pt;
     font-weight: bolder;
@@ -399,7 +412,7 @@ main .description .desc_img > img {
     box-shadow: 0 0 20px 4px #c9c6c6;
     -webkit-box-shadow: 0 0 20px 4px #c9c6c6;
 }
-.description:hover > .first .arrow_detail {
+.front:hover > .arrow_detail {
     animation: arrowX 1.5s infinite ease-in-out;
 }
 @keyframes arrowX {

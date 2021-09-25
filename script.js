@@ -5,12 +5,16 @@ function showMenu() {
     $('.submenu_projects').slideDown(600);
 }
 function rotate() {
-    $('.first').css('transform', 'rotate3d(0, -1, 0, 90deg)').css('transition','all 2s');
+    $('.cube:hover').css('transform', 'rotateX(0deg) rotateY(-90deg) translateZ(-40px)');
+}
+function rotateBack() {
+    $('.cube:hover').css('transform', 'rotateX(0deg) rotateY(0deg)');
 }
 $(document).ready(function () {
     $('.menu_projects').on('mouseover', showMenu);
     $('.menu_projects_hover').on('mouseleave', hideMenu);
-    $('.arrow_detail').on('click', rotate)
+    $('.arrow_detail').on('click', rotate);
+    $('.right').on('click', rotateBack);
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {

@@ -48,6 +48,7 @@
     </header>
 
     <main>
+
         <p class="heading">Описание</p>
         <article class="description">
             <div class="desc_content">
@@ -60,27 +61,50 @@
                 <img src="images/execution.jpg" alt="">
             </div>
         </article>
+
         <p class="heading">Этапы разработки</p>
         <div class="steps">
-            <div class="description">
-                <div class="first">
-                    <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>
-                    <div class="short"><p>Составление ТЗ</p>На данном этапе с заказчиком обговариваются условия сотрудничества
-                        и конкретный план предполагаемого сайта
+            <div class="wrap">
+                <div class="cube">
+                    <div class="front">
+<!--                        <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>-->
+                        <div class="desc_content">
+                            <p>Составление ТЗ</p>
+                            На данном этапе обговариваются
+                            условия сотрудничества между заказчиком и исполнителем
+                        </div>
+                        <div class="arrow_detail">
+                            <div class="arrow">&#8594;</div>
+                        </div>
                     </div>
-                    <div class="arrow_detail">
-                        <div class="right">&#8594;</div>
-                    </div>
-                </div>
-                <div class="second">
-                    <div class="short">
-                        Какой-то текст
+                    <div class="right">
+                        Right side
                     </div>
                 </div>
             </div>
-            <div class="description"></div>
-            <div class="description"></div>
 
+            <div class="wrap">
+                <div class="cube">
+                    <div class="front">
+                        Front side
+                    </div>
+                    <div class="right">
+                        Right side
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="cube">
+                    <div class="front">
+                        Front side
+                    </div>
+                    <div class="right">
+                        Right side
+                    </div>
+                </div>
+            </div>
+        </div>
         <a class="arrow_up" title="Наверх" style="display: none">&#8593;</a>
     </main>
 

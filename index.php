@@ -35,8 +35,7 @@
                     <div class="submenu_projects" style="display: none">
                         <?php
                             require_once 'functions.php';
-                            $projects = get_projects();
-                            foreach ($projects as $item) echo "<a href='#'>$item</a>";
+                            echo get_projects();
                         ?>
                     </div>
                 </li>
@@ -58,7 +57,7 @@
             ?>
             </div>
             <div class="desc_img">
-                <img src="images/execution.jpg" alt="">
+                <img src="images/growth.jpg" alt="">
             </div>
         </article>
 
@@ -67,11 +66,11 @@
             <div class="wrap">
                 <div class="cube">
                     <div class="front">
-<!--                        <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>-->
+                        <div class="desc_img"><img src="images/discussion.jpg" alt=""></div>
                         <div class="desc_content">
                             <p>Составление ТЗ</p>
-                            На данном этапе обговариваются
-                            условия сотрудничества между заказчиком и исполнителем
+                            <p>На данном этапе обговариваются
+                                условия сотрудничества между заказчиком и исполнителем</p>
                         </div>
                         <div class="arrow_detail">
                             <div class="arrow">&#8594;</div>
@@ -86,7 +85,15 @@
             <div class="wrap">
                 <div class="cube">
                     <div class="front">
-                        Front side
+                        <div class="desc_img"><img src="images/execution.jpg" alt=""></div>
+                        <div class="desc_content">
+                            <p>Составление ТЗ</p>
+                            <p>На данном этапе обговариваются
+                                условия сотрудничества между заказчиком и исполнителем</p>
+                        </div>
+                        <div class="arrow_detail">
+                            <div class="arrow">&#8594;</div>
+                        </div>
                     </div>
                     <div class="right">
                         Right side
@@ -97,7 +104,15 @@
             <div class="wrap">
                 <div class="cube">
                     <div class="front">
-                        Front side
+                        <div class="desc_img"><img src="images/deadline.jpg" alt=""></div>
+                        <div class="desc_content">
+                            <p>Составление ТЗ</p>
+                            <p>На данном этапе обговариваются
+                                условия сотрудничества между заказчиком и исполнителем</p>
+                        </div>
+                        <div class="arrow_detail">
+                            <div class="arrow">&#8594;</div>
+                        </div>
                     </div>
                     <div class="right">
                         Right side

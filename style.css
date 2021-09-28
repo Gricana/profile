@@ -308,8 +308,8 @@ main .description .desc_content {
 }
 main .description .desc_img {
     display: block;
-    width: 35%;
-    margin-left: 10%;
+    width: 33%;
+    margin-left: 9%;
 }
 main .description .desc_img > img {
     width: 100%;
@@ -344,8 +344,7 @@ main .description .desc_img > img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*justify-content: space-around;*/
-    margin: 25px 0 50px 0;
+    margin: 25px 0 150px 0;
 }
 .wrap {
     margin-right: auto;
@@ -353,12 +352,12 @@ main .description .desc_img > img {
     perspective-origin: 0;
 }
 .steps .wrap:last-child {
-    margin-right: 30px;
+    margin-right: 35px;
 }
 .cube {
     position: relative;
-    height: 280px;
-    width: 280px;
+    height: 400px;
+    width: 300px;
     transform-style: preserve-3d;
     transition: all 1s ease-in;
 }
@@ -367,33 +366,57 @@ main .description .desc_img > img {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    opacity: 1;
+    padding: 20px;
     background-color: white;
     border: solid 2px #eae7e7;
     border-radius: 25px;
+    font-size: small;
+    line-height: 25px;
+    text-align: justify;
+    word-wrap: break-word;
+    font-style: italic;
 }
-.steps .wrap:nth-child(1) .front {
+.cube > div p:first-child {
+    padding-bottom: 5px;
+    font-size: 12pt;
+    opacity: 65%;
+    font-weight: bold;
+}
+.steps .wrap:nth-child(1) .front, .steps .wrap:last-child .right {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-.cube .right:last-child {
+.steps .wrap:nth-child(2) .front, .steps .wrap:nth-child(2) .right {
+    border-radius: 0;
+}
+.steps .wrap:nth-child(3) .front, .steps .wrap:nth-child(1) .right {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 .cube > div:hover {
     border: solid 2px #77b5d3;
-    transition: all 1.2s;
+    transition: all .7s;
 }
 .front {
-    transform: translateZ(180px);
+    transform: translateZ(200px);
 }
 .right {
+    height: inherit;
     transform: rotateY(-270deg) translateX(100px);
     transform-origin: top right;
 }
+.steps .wrap:last-child .right {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: top left;
+}
+.front .desc_img img {
+     width: 100%;
+     height: auto;
+     border-radius: 25px;
+ }
 .arrow_detail {
     position: relative;
-    left: 89%;
+    left: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -401,6 +424,7 @@ main .description .desc_img > img {
     height: 40px;
     background: #77b5d3;
     border-radius: 50%;
+    cursor: pointer;
     margin-top: 15px;
 }
 .arrow_detail .arrow {

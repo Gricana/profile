@@ -1,5 +1,5 @@
 <?php
-    $hostname = 'localhost';
+    $hostname = '';
     $database = '';
     $username = '';
     $password = '';
@@ -19,6 +19,11 @@
         global $connection;
         $result = $connection->query('SELECT title FROM projects');
         if (!$result)  die('Не удалось получить названия проектов');
-        else return array($result->fetch_array(MYSQLI_ASSOC)['title']);
+        else {
+            $title = "";
+            foreach ($result as $item) $title .= "<a href='#'>".$item['title']."</a>";
+        }
+        $result->free();
+        return $title;
     }
 ?>

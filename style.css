@@ -7,7 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: linear-gradient(to right bottom, #b5e783, #dfd458,  #65d4ea, #9b78cb);
+    background: linear-gradient(123deg, #7996c6 0%, #56b6df 100%),
+    linear-gradient(236deg, #BAFF99 0%, #bcbc40 100%),
+    linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%),
+    linear-gradient(225deg, #55a6d8 20%, #BFF4ED 45%, #bd8ed2 45%, #bd8ed2 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%),
+    linear-gradient(135deg, #9b7fc6 15%, #9b7fc6 35%, #f49cc9 35%, #f49cc9 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background-blend-mode: hard-light, luminosity, soft-light, darken, darken;
 }
 header {
     width: 100%;
@@ -266,7 +271,7 @@ nav ol li a:hover {
     content: none;
 }
 main {
-    margin-top: 200px;
+    margin-top: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -322,15 +327,15 @@ main .description .desc_img > img {
     right: 1%;
     bottom: 2%;
     background: #ffd265;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     font-size: 18pt;
     color: white;
     font-weight: bold;
     z-index: 105;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 7px;
     box-shadow: 0 0 20px 7px #e6cc8b;
     -webkit-box-shadow: 0 0 10px 5px #e6cc8b;
 }
@@ -359,7 +364,7 @@ main .description .desc_img > img {
     height: 400px;
     width: 300px;
     transform-style: preserve-3d;
-    transition: all 1s ease-in;
+    transition: all .9s ease-in-out;
 }
 .cube > div {
     position: absolute;
@@ -422,7 +427,7 @@ main .description .desc_img > img {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #77b5d3;
+    background: #ffd265;
     border-radius: 50%;
     cursor: pointer;
     margin-top: 15px;
